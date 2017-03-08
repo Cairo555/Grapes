@@ -1,0 +1,94 @@
+<% include partials/header %>
+<h1>Add LDAP Configuration</h1>
+
+<% if(errors){ %>
+<ul>
+<% errors.forEach(function(error){ %>
+	<li><%= error.msg %></li>
+ <% }) %>	
+ </ul>
+<% } %>
+<form method="POST" action="/ldap_configuration/add">
+	<div>
+		<div class="divTable">
+		<div class="divTableBody">
+		<div class="divTableRow">
+		<div class="divTableCell"><label>Customers</label></div>
+		<div class="divTableCell"><% include partials/customers %></div>
+		</div>
+
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>Description</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_description"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>URL</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_url" value="ldap://127.0.0.1"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>Port</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_port" value="389"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>SocketPath</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_socketpath" value=""></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>Log</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_Log" value=""></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>Timeout</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_Timeout" value="infinity"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>ConnectTimeout</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_ConnectTimeOut" value="OS Default"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>tlsOptions</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_tlsOptions" value=""></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>IdleTimeout</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_IdleTimeOut" value="30"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>StrictDN</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_StrictDN" value="true"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>username</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_username"></div>
+		</div>
+
+		<div class="divTableRow">
+		<div class="divTableCell"><label>password</label></div>
+		<div class="divTableCell"><input type="text" name="ldap_password"></div>
+		</div>
+		
+		<div class="divTableRow">
+		<div class="divTableCell"><input type="submit" value="Verstuur"></div>
+		</div>
+
+		</div>
+		</div>
+	
+	</div>
+</form>
+<h1><%= title %></h1>
+<ul>
+
+</ul>
+<% include partials/footer %>

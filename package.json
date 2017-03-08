@@ -1,0 +1,20 @@
+{
+  "name": "grapes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Apps to visualize data in Active Directory",
+  "main": "grapes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niels Hanssen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.5.6",
+    "express-validator": "^3.1.2",
+    "expresss": "*",
+    "ldapjs": "^1.0.1",
+    "mongojs": "^2.4.0"
+  }
+}
